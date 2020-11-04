@@ -1,0 +1,3 @@
+cd /D F:\YandexDisk\Windows Forms Programming Guide\2
+
+ipy "C:\Program Files (x86)\IronPython 2.7\Tools\Scripts\pyc.py" /target:winexe /main:"F:\YandexDisk\Windows Forms Programming Guide\2\205.py" /standalone
