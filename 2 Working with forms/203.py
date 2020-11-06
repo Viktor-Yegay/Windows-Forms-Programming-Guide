@@ -1,4 +1,6 @@
 # -*- coding: utf-8 -*-
+from os import path
+
 import clr
 clr.AddReference('System.Drawing')
 clr.AddReference('System.Windows.Forms')
@@ -14,7 +16,8 @@ class TestWindow(Form):
         self.Size = Size(260, 280)
         self.FormBorderStyle = FormBorderStyle.Fixed3D
         self.CenterToScreen()
-        self.BackgroundImage = Image.FromFile(r"F:\YandexDisk\Windows Forms Programming Guide\2\image.jpg")
+        parent_dir = path.dirname(path.abspath(__file__))
+        self.BackgroundImage = Image.FromFile(parent_dir + '\\' + 'image.jpg')
         self.BackgroundImageLayout = ImageLayout.Center
         self.BackColor = Color.Aquamarine
 
@@ -31,9 +34,6 @@ class TestWindow(Form):
         self._btn_1.Parent = self
         self._btn_1.Click += self._button_click
 
-    # def _button_click(self, sender, event_args):
-    #     MessageBox.Show("Доброго времени суток, Виктор")
-
     def _button_click(self, sender, event_args):
         newForm = Form2(self)
         newForm.ShowDialog()
@@ -47,7 +47,8 @@ class Form2(Form):
         self.Size = Size(260, 280)
         self.FormBorderStyle = FormBorderStyle.Fixed3D
         self.CenterToScreen()
-        self.BackgroundImage = Image.FromFile(r"F:\YandexDisk\Windows Forms Programming Guide\2\image.jpg")
+        parent_dir = path.dirname(path.abspath(__file__))
+        self.BackgroundImage = Image.FromFile(parent_dir + '\\' + 'image.jpg')
         self.BackgroundImageLayout = ImageLayout.Center
         self.BackColor = Color.Aquamarine
 
@@ -55,6 +56,3 @@ class Form2(Form):
 if __name__ == "__main__":
     test = TestWindow()
     test.ShowDialog()
-
-    # test = TestWindow()
-    # Application.Run(test)
