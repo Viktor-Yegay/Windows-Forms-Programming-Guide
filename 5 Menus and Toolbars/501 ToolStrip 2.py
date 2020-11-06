@@ -1,4 +1,6 @@
 # -*- coding: utf-8 -*-
+from os import path
+
 import clr
 clr.AddReference('System')
 clr.AddReference('System.Drawing')
@@ -15,7 +17,8 @@ class TestWindow(Form):
         self.clearBtn = ToolStripButton()
         self.clearBtn.Text = "Поиск"
         self.clearBtn.DisplayStyle = ToolStripItemDisplayStyle.ImageAndText
-        self.clearBtn.Image = Image.FromFile(r"F:\YandexDisk\Windows Forms Programming Guide\5\IronMan32x32.png")
+        parent_dir = path.dirname(path.abspath(__file__))
+        self.clearBtn.Image = Image.FromFile(parent_dir + '\\' + 'IronMan32x32.png')
         # добавляем на панель инструментов
         self.toolStrip1.Items.Add(self.clearBtn)
 
