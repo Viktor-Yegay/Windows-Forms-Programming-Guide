@@ -1,17 +1,16 @@
-# Windows Forms Programming Guide
+# Windows Forms на IronPython
 
-System.Windows.Forms на IronPython, чтоб лучше понимать формы, так как в Visual Studio их проще создавать (там есть конструктор)
-
+Для лучшего понимания форм.
 
 Перевод форм из C# в Python был следующий:
-```sh
-// заменял на #
-; заменял на ""
-this заменял на self
-```
-дальше что считал не нужным удалял
+|C#    |Python  |
+|:---: |:---:   |
+|`//`  |`#`     |
+|`;`   |        |
+|`this`|`self`  |
 
-Код C# был с этого сайта https://metanit.com/sharp/windowsforms/1.1.php
+дальше что считал не нужным удалял.
 
+Код C# отсюда [Руководство по программированию в Windows Forms](https://metanit.com/sharp/windowsforms/)
 >P.S.
->Спасибо, Павлу Алтынникову за помощь когда затруднялся в переводе на Python
+>Спасибо, Павлу Алтынникову за помощь когда затруднялся в переводе на Python.
